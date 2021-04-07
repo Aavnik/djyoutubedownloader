@@ -1,0 +1,30 @@
+{% extends 'youtube/base.html' %}
+
+{% block body %}
+
+<div class="container-fluid">
+    
+      
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col col-sm-6 col-md-6 col-xl-6 col-lg-3 mt-5 ">
+                <center><h1 class="m-3 lan">Youtube Video Downloader</h1></center>
+            <form action="download/" method="GET">
+                <div class="form-group">
+                
+                  <input type="text" name="ytlink"  id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter link">
+                  
+                </div>
+               
+               <center> <button type="submit" class=" mt-4 btn btn-dark btn-lg btn-block">Submit</button></center>
+              </form>
+
+        </div>
+        
+
+    </div>
+
+    
+
+</div>
+
+{% endblock body %}

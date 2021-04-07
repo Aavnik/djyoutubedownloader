@@ -1,0 +1,45 @@
+{% extends 'youtube/base.html' %}
+{% block body %}
+
+
+  <div class="row justify-content-center align-items-center h-100">
+        <div class="col col-sm-6 col-md-6 col-xl-6 col-lg-3 mt-5 ">
+           
+        <h1>Title :{{title}}</h1>
+<div class="embed-responsive embed-responsive-21by9">
+  <iframe class="embed-responsive-item" src="{{embed}}" allowfullscreen></iframe>
+</div>
+<div>
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Size</th>
+        <th scope="col">Type</th>
+        <th scope="col">Quality</th>
+        <th scope="col">Download</th>
+      </tr>
+    </thead>
+    {% for aav in videos %}
+    <tbody>
+      <tr>
+        <th >{{aav.filesize}}</th>
+        <td>{{aav.type}}</td>
+        <td>{{aav.resolution}}</td>
+        <td>
+          <form action="{% url 'ytyoutube:yt_downloaddone' aav.resolution %}" method="post">
+            {%csrf_token%}
+            <button type="submit" class="btn btn-dark ">Download</button>
+          </form>
+        
+        </td>
+      </tr>
+     
+    </tbody>
+    {% endfor %}
+  </table>
+</div>
+
+
+    </div>
+
+{% endblock body %}
