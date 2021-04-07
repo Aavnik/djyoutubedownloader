@@ -25,7 +25,7 @@ SECRET_KEY = 'y=y870prq_@_70@5)d_wwxosmfq7r6#sjch_%^a6pt32*2s_)v'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['djvideos.herokuapp.com/','localhost']
+ALLOWED_HOSTS = ['djvideos.herokuapp.com']
 
 
 # Application definition
